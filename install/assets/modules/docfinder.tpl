@@ -1,18 +1,14 @@
-﻿// <?php 
+<?php
 /**
  * Doc Finder
- * 
- * быстрый поиск и замена в админке
- * 
- * @category	module
- * @version 	1.6
+ *
+ * Ajax powered search and replace for the manager.
+ *
+ * @category 	module
+ * @version 	1.7
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
- * @internal	@properties
- * @internal	@guid docfind3453245kl32454235432534534
- * @internal	@shareparams 1
- * @internal	@dependencies requires files located at /assets/modules/docmanager/
+ * @author      bogdanio
  * @internal	@modx_category Manager and Admin
  * @internal    @installset base, sample
  */
-
-include($modx->config['base_path']."assets/modules/docfinder/index.php");
+include(MODX_BASE_PATH . 'assets/modules/docfinder/index.php');
