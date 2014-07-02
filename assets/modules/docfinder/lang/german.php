@@ -88,6 +88,6 @@ $_lang['date_options'] = 'Datums-Optionen';
 $_lang['all'] = 'Alle';
 $_lang['form_no_results'] = '<span id="results_info">Keine</span> Ergebnisse';
 $_lang['form_search_for'] = '<span id="results_string">für &bdquo;<strong id="search_string"></strong>&ldquo;</span>';
-$_lang['form_replace_with'] = '<span id="replace_info">ersetzt mit &bdquo;<strong id="replace_string"></strong>&ldquo;</span>';
+$_lang['form_replace_with'] = '<span id="replace_info">ersetzt durch &bdquo;<strong id="replace_string"></strong>&ldquo;</span>';
 $_lang['form_time'] = '<span id="time_info">(<span id="time">&ndash;</span> Sekunden)</span>';
 $_lang['cancel_search'] = 'Suche abbrechen';
