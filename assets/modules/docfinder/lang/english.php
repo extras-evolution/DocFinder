@@ -91,3 +91,4 @@ $_lang['form_search_for'] = '<span id="results_string">for &ldquo;<strong id="se
 $_lang['form_replace_with'] = '<span id="replace_info">replaced by &ldquo;<strong id="replace_string"></strong>&rdquo;</span>';
 $_lang['form_time'] = '<span id="time_info">(<span id="time">&ndash;</span> seconds)</span>';
 $_lang['cancel_search'] = 'Cancel search';
+$_lang['number_of_entries'] = 'Number of entries';
