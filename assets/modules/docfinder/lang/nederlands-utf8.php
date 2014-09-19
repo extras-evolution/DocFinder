@@ -91,3 +91,4 @@ $_lang['form_search_for'] = '<span id="results_string">voor &ldquo;<strong id="s
 $_lang['form_replace_with'] = '<span id="replace_info">vervangen door &ldquo;<strong id="replace_string"></strong>&rdquo;</span>';
 $_lang['form_time'] = '<span id="time_info">(<span id="time">&ndash;</span> seconden)</span>';
 $_lang['cancel_search'] = 'Annuleer zoeken';
+$_lang['number_of_entries'] = 'Aantal regels';
