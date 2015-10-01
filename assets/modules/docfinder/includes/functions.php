@@ -666,7 +666,7 @@ function replace($searchString, $replaceString, $id, $searchFieldName, $searchFi
     if ($searchOptions['case_sensitive']) $searchFieldStringReplaced = str_replace($searchString, $replaceString, $searchFieldString);
     else $searchFieldStringReplaced = str_ireplace($searchString, $replaceString, $searchFieldString);
 
-    $searchFieldStringReplaced = mysql_real_escape_string($searchFieldStringReplaced);
+    $searchFieldStringReplaced = $modx->db->escape($searchFieldStringReplaced);
 
     // update Database
     $replaceResult = $modx->db->update($searchFieldName . ' = "' . $searchFieldStringReplaced . '"', $table, 'id = "' . $id . '"');
@@ -676,8 +676,10 @@ function replace($searchString, $replaceString, $id, $searchFieldName, $searchFi
 
 function getSqlWhere($searchString, $searchField, $searchOptions)
 {
+    global $modx;
+
     // prepare SQL Query
-    $sqlWhere = mysql_real_escape_string($searchString);
+    $sqlWhere = $modx->db->escape($searchString);
 
     // take care of ID search
     if ($searchField == 'id' and is_numeric($searchString)) return 'WHERE ' . $searchField . '=' . $searchString;
