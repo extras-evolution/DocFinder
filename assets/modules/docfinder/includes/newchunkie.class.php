@@ -561,7 +561,7 @@ class newChunkie
                 if (!isset($this->modx->chunkieCache['@FILE'])) {
                     $this->modx->chunkieCache['@FILE'] = array();
                 }
-                if (!empty($filename) && !array_key_exists($filename, $this->modx->chunkieCache['@FILE'])) {
+                if (!empty($filename) && !isset($this->modx->chunkieCache[$filename])) {
                     if (file_exists($this->options['basepath'] . $filename)) {
                         $template = file_get_contents($this->options['basepath'] . $filename);
                     } else {
@@ -584,7 +584,7 @@ class newChunkie
                 if (!isset($this->modx->chunkieCache['@CHUNK'])) {
                     $this->modx->chunkieCache['@CHUNK'] = array();
                 }
-                if (!empty($chunkname) && !array_key_exists($chunkname, $this->modx->chunkieCache['@CHUNK'])) {
+                if (!empty($chunkname) && !isset($this->modx->chunkieCache['@CHUNK'][$chunkname])) {
                     $chunk = $this->modx->getChunk($chunkname);
                     $template = ($chunk) ? $chunk : $chunkname;
                     $this->modx->chunkieCache['@CHUNK'][$chunkname] = $template;
