@@ -92,4 +92,3 @@ $_lang['form_replace_with'] = '<span id="replace_info">ersetzt durch &bdquo;<str
 $_lang['form_time'] = '<span id="time_info">(<span id="time">&ndash;</span> Sekunden)</span>';
 $_lang['cancel_search'] = 'Suche abbrechen';
 $_lang['number_of_entries'] = 'Anzahl der Ergebnisse';
-

@@ -11,4 +11,6 @@
  * @internal	@modx_category Manager and Admin
  * @internal    @installset base, sample
  */
-include(MODX_BASE_PATH . 'assets/modules/docfinder/docfinder.module.php');
+
+include_once(MODX_BASE_PATH . 'assets/modules/docfinder/docfinder.module.php');
+
