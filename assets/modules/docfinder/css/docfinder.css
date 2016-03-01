@@ -273,7 +273,7 @@ div#results_container thead {
 
 div#results_container table th,
 div#results_container table td {
-    padding: 4px 15px 2px 4px;
+    padding: 4px;
 
     text-align: left;
     vertical-align: top;
