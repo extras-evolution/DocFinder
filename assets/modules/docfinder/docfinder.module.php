@@ -116,10 +116,11 @@ if (isset($_POST['update_session'])) $update_session = $_POST['update_session'];
 // get and set post and session vars: search places
 if (isset($_POST['search_place_selector']) or !empty($_SESSION['docfinder_search_place_selector']) and !$update_session) $searchOptions['search_place_selector'] = 'checked="checked"'; else $searchOptions['search_place_selector'] = "";
 foreach ($searchPlacesArray as $searchPlace) {
-    if (isset($_POST['search_place_' . $searchPlace['id']]) or !empty($_SESSION['docfinder_search_place_' . $searchPlace['id']]) and !$update_session) {
-        $searchOptions['search_place_' . $searchPlace['id']] = 'checked="checked"';
+    $target = $searchPlace['id'];
+    if (isset($_POST["search_place_{$target}"]) or !empty($_SESSION["docfinder_search_place_{$target}"]) and !$update_session) {
+        $searchOptions["search_place_{$target}"] = 'checked="checked"';
     } else {
-        $searchOptions['search_place_' . $searchPlace['id']] = "";
+        $searchOptions["search_place_{$target}"] = "";
     }
 }
 // get and set post and session vars: search options
