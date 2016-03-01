@@ -49,11 +49,11 @@
 <div id="actions">
     <ul class="actionButtons">
         <li id="Button1"><a href="index.php?a=112&amp;id=[+options.module_id+]">
-            <img src="media/style/[+options.theme+]/images/icons/refresh.png" alt="[+lang.reload+]"/>
+            <img src="[+icon.icons_refresh+]" alt="[+lang.reload+]"/>
             [+lang.reload+]
         </a></li>
         <li id="Button2"><a href="index.php?a=106">
-            <img src="media/style/[+options.theme+]/images/icons/stop.png" alt="[+lang.close_button+]"/>
+            <img src="[+icon.icons_close+]" alt="[+lang.close_button+]"/>
             [+lang.close_button+]
         </a></li>
     </ul>
@@ -82,7 +82,7 @@
                 <input type="text" class="text" name="searchstring" id="searchstring" value="[+search_options.search+]" onkeyup="triggerSubmitButtons();"/>
 
                 <!-- help button search -->
-                <img src="media/style/[+options.theme+]/images/icons/b02_trans.gif" onmouseover="this.src='media/style/[+options.theme+]/images/icons/b02.gif';" onmouseout="this.src='media/style/[+options.theme+]/images/icons/b02_trans.gif';" alt="[+lang.help_search+]" class="icon help" onclick="alert(this.alt);"/>
+                <img src="[+icon.icons_tooltip_over+]" onmouseover="this.src='[+icon.icons_tooltip+]';" onmouseout="this.src='[+icon.icons_tooltip_over+]';" alt="[+lang.help_search+]" class="icon help" onclick="alert(this.alt);"/>
 
                 <!-- search history -->
                 <span id="search_history_box">[+history.search+]</span>
@@ -102,7 +102,7 @@
                 <input type="hidden" name="replace_mode" id="replace_mode" value=""/>
 
                 <!-- help button replace -->
-                <img src="media/style/[+options.theme+]/images/icons/b02_trans.gif" onmouseover="this.src='media/style/[+options.theme+]/images/icons/b02.gif';" onmouseout="this.src='media/style/[+options.theme+]/images/icons/b02_trans.gif';" alt="[+lang.help_replace+]" class="icon help" onclick="alert(this.alt);"/>
+                <img src="[+icon.icons_tooltip_over+]" onmouseover="this.src='[+icon.icons_tooltip+]';" onmouseout="this.src='[+icon.icons_tooltip_over+]';" alt="[+lang.help_replace+]" class="icon help" onclick="alert(this.alt);"/>
 
                 <!-- replace history -->
                 <span id="replace_history_box">[+history.replace+]</span>
@@ -133,7 +133,7 @@
                 <label><input type="checkbox" class="checkbox" name="sortable_tables" id="sortable_tables" [+search_options.sortable_tables+] />[+lang.sortable_tables+]</label>
 
                 <!-- help sortable tables -->
-                <img src="media/style/[+options.theme+]/images/icons/b02_trans.gif" onmouseover="this.src='media/style/[+options.theme+]/images/icons/b02.gif';" onmouseout="this.src='media/style/[+options.theme+]/images/icons/b02_trans.gif';" alt="[+lang.help_sortable_tables+]" class="icon help" onclick="alert(this.alt);"/>
+                <img src="[+icon.icons_tooltip_over+]" onmouseover="this.src='[+icon.icons_tooltip+]';" onmouseout="this.src='[+icon.icons_tooltip_over+]';" alt="[+lang.help_sortable_tables+]" class="icon help" onclick="alert(this.alt);"/>
             </p>
 
             <script type="text/javascript">
@@ -152,7 +152,7 @@
                 <input type="text" class="text" name="parents" id="parents" value="[+search_options.parents+]"/>
 
                 <!-- help button -->
-                <img src="media/style/[+options.theme+]/images/icons/b02_trans.gif" onmouseover="this.src='media/style/[+options.theme+]/images/icons/b02.gif';" onmouseout="this.src='media/style/[+options.theme+]/images/icons/b02_trans.gif';" alt="[+lang.help_parent_ids+]" class="icon help" onclick="alert(this.alt);"/>
+                <img src="[+icon.icons_tooltip_over+]" onmouseover="this.src='[+icon.icons_tooltip+]';" onmouseout="this.src='[+icon.icons_tooltip_over+]';" alt="[+lang.help_parent_ids+]" class="icon help" onclick="alert(this.alt);"/>
             </p>
 
             <!-- search in -->
@@ -204,24 +204,24 @@
             <p class="date_range createdon">
                 <label for="createdon_start" class="text_label">[+lang.created_between+]:</label>
                 <input type="text" class="text" name="createdon_start" id="createdon_start" value="[+search_options.createdon_start+]"/>
-                <img src="media/style/[+options.theme+]/images/icons/delete.gif" alt="[+lang.clear_date+]" class="icon delete" onclick="$('createdon_start').value='';"/>
+                <img src="[+icon.icons_delete+]" alt="[+lang.clear_date+]" class="icon delete" onclick="$('createdon_start').value='';"/>
                 <input type="text" class="text" name="createdon_end" id="createdon_end" value="[+search_options.createdon_end+]"/>
-                <img src="media/style/[+options.theme+]/images/icons/delete.gif" alt="[+lang.clear_date+]" class="icon delete" onclick="$('createdon_end').value='';"/>
+                <img src="[+icon.icons_delete+]" alt="[+lang.clear_date+]" class="icon delete" onclick="$('createdon_end').value='';"/>
 
                 <!-- help button replace -->
-                <img src="media/style/[+options.theme+]/images/icons/b02_trans.gif" onmouseover="this.src='media/style/[+options.theme+]/images/icons/b02.gif';" onmouseout="this.src='media/style/[+options.theme+]/images/icons/b02_trans.gif';" alt="[+lang.help_creation_date_range+]" class="icon help" onclick="alert(this.alt);"/>
+                <img src="[+icon.icons_tooltip_over+]" onmouseover="this.src='[+icon.icons_tooltip+]';" onmouseout="this.src='[+icon.icons_tooltip_over+]';" alt="[+lang.help_creation_date_range+]" class="icon help" onclick="alert(this.alt);"/>
             </p>
 
             <!-- date range edited on -->
             <p class="date_range editedon">
                 <label for="editedon_start" class="text_label">[+lang.edited_between+]:</label>
                 <input type="text" class="text" name="editedon_start" id="editedon_start" value="[+search_options.editedon_start+]"/>
-                <img src="media/style/[+options.theme+]/images/icons/delete.gif" alt="[+lang.clear_date+]" class="icon delete" onclick="$('editedon_start').value='';"/>
+                <img src="[+icon.icons_delete+]" alt="[+lang.clear_date+]" class="icon delete" onclick="$('editedon_start').value='';"/>
                 <input type="text" class="text" name="editedon_end" id="editedon_end" value="[+search_options.editedon_end+]"/>
-                <img src="media/style/[+options.theme+]/images/icons/delete.gif" alt="[+lang.clear_date+]" class="icon delete" onclick="$('editedon_end').value='';"/>
+                <img src="[+icon.icons_delete+]" alt="[+lang.clear_date+]" class="icon delete" onclick="$('editedon_end').value='';"/>
 
                 <!-- help button replace -->
-                <img src="media/style/[+options.theme+]/images/icons/b02_trans.gif" onmouseover="this.src='media/style/[+options.theme+]/images/icons/b02.gif';" onmouseout="this.src='media/style/[+options.theme+]/images/icons/b02_trans.gif';" alt="[+lang.help_edited_date_range+]" class="icon help" onclick="alert(this.alt);"/>
+                <img src="[+icon.icons_tooltip_over+]" onmouseover="this.src='[+icon.icons_tooltip+]';" onmouseout="this.src='[+icon.icons_tooltip_over+]';" alt="[+lang.help_edited_date_range+]" class="icon help" onclick="alert(this.alt);"/>
             </p>
 
             <script type="text/javascript">
@@ -238,7 +238,7 @@
         <!-- search submit button-->
         <li>
             <a href="index.php?a=112&amp;id=[+options.module_id+]" id="submit_search">
-                <img src="media/style/[+options.theme+]/images/icons/save.png" class="go" alt="Click or press ENTER to start search."/>
+                <img src="[+icon.icons_save+]" class="go" alt="Click or press ENTER to start search."/>
                 [+lang.search+]
                 <input type="submit" value="[+lang.search+]"/>
             </a>
@@ -247,7 +247,7 @@
         <!-- replace submit button-->
         <li>
             <a href="index.php?a=112&amp;id=[+options.module_id+]" id="submit_replace">
-                <img src="media/style/[+options.theme+]/images/icons/save.png" class="replace" alt="Click or press ENTER to start search."/>
+                <img src="[+icon.icons_save+]" class="replace" alt="Click or press ENTER to start search."/>
                 Replace
             </a>
         </li>
@@ -283,7 +283,7 @@
         <div id="ajax_load_indicator">
             <img src="../[+options.module_url+]images/ajax-loader.gif" width="220" height="19" alt="Ajax Loader" class="ajax_loader"/>
             <span>[+lang.searching+]</span>
-            <a href="#" id="cancel_search" title="[+lang.cancel_search+]"><img src="media/style/[+options.theme+]/images/icons/delete.gif" alt="[+lang.cancel_search+]"/> [+lang.cancel_search+]</a>
+            <a href="#" id="cancel_search" title="[+lang.cancel_search+]"><img src="[+icon.icons_delete+]" alt="[+lang.cancel_search+]"/> [+lang.cancel_search+]</a>
         </div>
 
         <!-- AJAX results container -->

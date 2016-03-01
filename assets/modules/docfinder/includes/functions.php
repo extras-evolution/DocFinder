@@ -191,9 +191,9 @@ function printResultTables($area, $search, $searchOptions, $theme, $results, $se
 
                     // check document type
                     if ($modx->getDocumentChildren($searchResults['id'])) {
-                        $iconName = "folder.gif";
+                        $iconName = "[+icon.tree_folder+]";
                     } else {
-                        $iconName = "page.gif";
+                        $iconName = "[+icon.tree_page+]";
                     }
 
                     // output result
@@ -201,7 +201,7 @@ function printResultTables($area, $search, $searchOptions, $theme, $results, $se
                     <tr>
                         <td class="no align_right">' . ($counter + 1) . '</td>
                         <td class="type">
-                            <img src="media/style/[+options.theme+]/images/tree/' . $iconName . '" alt=""/>
+                            <img src="' . $iconName . '" alt=""/>
                         </td>
                         <td class="id align_right">' . $searchResults['id'] . '</td>
                         <td class="pagetitle' . $pagetitle_class . '">
@@ -217,9 +217,9 @@ function printResultTables($area, $search, $searchOptions, $theme, $results, $se
                     }
                     $output .= '
                         <td class="functions">
-                            <a href="' . $urlEdit . '" title="[+lang.edit+]"><img src="media/style/[+options.theme+]/images/icons/save.png" alt="[+lang.edit+]"/></a>
-                            <a href="' . $urlInfo . '" title="[+lang.info+]"><img src="media/style/[+options.theme+]/images/tree/page-html.gif" alt="[+lang.info+]"/></a>
-                            <a href="' . $urlOpen . '" title="[+lang.preview+]" target="_blank"><img src="media/style/[+options.theme+]/images/icons/page_white_magnify.png" alt="[+lang.preview+]"/></a>
+                            <a href="' . $urlEdit . '" title="[+lang.edit+]"><img src="[+icon.icons_save+]" alt="[+lang.edit+]"/></a>
+                            <a href="' . $urlInfo . '" title="[+lang.info+]"><img src="[+icon.icons_information+]" alt="[+lang.info+]"/></a>
+                            <a href="' . $urlOpen . '" title="[+lang.preview+]" target="_blank"><img src="[+icon.icons_preview_resource+]" alt="[+lang.preview+]"/></a>
                         </td>
                     </tr>';
 
@@ -305,7 +305,7 @@ function printResultTables($area, $search, $searchOptions, $theme, $results, $se
                     }
                     $output .= '
                         <td class="functions">
-                            <a href="' . $urlEdit . '" title="[+lang.edit+]"><img src="media/style/[+options.theme+]/images/icons/save.png" alt="[+lang.edit+]"/></a>
+                            <a href="' . $urlEdit . '" title="[+lang.edit+]"><img src="[+icon.icons_save+]" alt="[+lang.edit+]"/></a>
                         </td>
                     </tr>';
 
@@ -415,11 +415,11 @@ function printResultTables($area, $search, $searchOptions, $theme, $results, $se
                         }
                         $output .= '
                             <td class="functions">
-                                <a href="' . $urlEdit . '" title="[+lang.edit+]"><img src="media/style/[+options.theme+]/images/icons/save.png" alt="[+lang.edit+]"/></a>';
+                                <a href="' . $urlEdit . '" title="[+lang.edit+]"><img src="[+icon.icons_save+]" alt="[+lang.edit+]"/></a>';
                         if ($section['id'] == "DocAndTVV") {
                             $output .= '
-                                <a href="' . $urlInfo . '" title="[+lang.info+]"><img src="media/style' . $theme . '/images/tree/page-html.gif" alt="[+lang.info+]"/></a>
-                                <a href="' . $urlOpen . '" title="[+lang.preview+]" target="_blank"><img src="media/style' . $theme . '/images/icons/page_white_magnify.png" alt="[+lang.preview+]"/></a>';
+                                <a href="' . $urlInfo . '" title="[+lang.info+]"><img src="[+icon.tree_page+]" alt="[+lang.info+]"/></a>
+                                <a href="' . $urlOpen . '" title="[+lang.preview+]" target="_blank"><img src="[+icon.icons_preview_resource+]" alt="[+lang.preview+]"/></a>';
                         }
                         $output .= '
                             </td>
