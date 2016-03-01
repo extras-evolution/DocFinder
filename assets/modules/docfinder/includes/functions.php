@@ -209,8 +209,8 @@ function printResultTables($area, $search, $searchOptions, $results, $searchPlac
                             <small>' . printDocumentBranch($searchResults['parentsArray']) . '</small>
                         </td>
                         <td class="longtitle">' . $searchResults['longtitle'] . '</td>
-                        <td class="createdon">' . date("d/m/Y", $searchResults['createdon']) . '</td>
-                        <td class="editedon">' . date("d/m/Y", $searchResults['editedon']) . '</td>';
+                        <td class="createdon">' . $modx->toDateFormat($searchResults['createdon']) . '</td>
+                        <td class="editedon">' . $modx->toDateFormat($searchResults['editedon']) . '</td>';
                     if ($search['string'] != "ALL") {
                         $output .= '
                         <td class="found_in">' . substr($searchResults['found_in'], 2) . '</td>';
@@ -377,8 +377,8 @@ function printResultTables($area, $search, $searchOptions, $results, $searchPlac
                             // set values
                             $name = $searchResults['pagetitle'];
                             $description = $searchResults['longtitle'];
-                            $createdon = date("d-m-Y", $searchResults['createdon']);
-                            $editedon = date("d-m-Y", $searchResults['editedon']);
+                            $createdon = $modx->toDateFormat($searchResults['createdon']);
+                            $editedon = $modx->toDateFormat($searchResults['editedon']);
                         } else { // set values for the resources
                             // set URLs
                             $urlEdit = "index.php?a=" . $searchPlacesArray[$area]['edit'] . "&amp;id=" . $searchResults['id'];
@@ -387,9 +387,9 @@ function printResultTables($area, $search, $searchOptions, $results, $searchPlac
                             if ($searchResults['templatename']) $searchResults['name'] = $searchResults['templatename'];
                             $name = $searchResults['name'];
                             $description = $searchResults['description'];
-                            if ($searchResults['createdon']) $createdon = date("d-m-Y", $searchResults['createdon']);
+                            if ($searchResults['createdon']) $createdon = $modx->toDateFormat($searchResults['createdon']);
                             else $createdon = "&ndash;";
-                            if ($searchResults['editedon']) $editedon = date("d-m-Y", $searchResults['editedon']);
+                            if ($searchResults['editedon']) $editedon = $modx->toDateFormat($searchResults['editedon']);
                             else $editedon = "&ndash;";
                         }
 
