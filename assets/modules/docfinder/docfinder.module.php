@@ -58,8 +58,6 @@ $options['module_id'] = (int)$_GET['id'];
 $options['module_url'] = DF_PATH;
 
 
-// set Theme
-$theme = '/MODxCarbon';
 
 // load text direction as seen in Doc manager
 if (isset($modx->config['manager_direction'])) $dir = ($modx->config['manager_direction'] == 'rtl' ? 'dir="rtl"' : '');
@@ -287,7 +285,7 @@ foreach ($searchPlacesArray as $searchPlace) {
 switch ($checkform) {
     case 'ajax_get_results':
         $chunkie = new newChunkie($modx, array('basepath' => DF_PATH));
-        $chunkie->setTpl(printResultTabs($search, $searchOptions, $theme, $searchPlacesArray));
+        $chunkie->setTpl(printResultTabs($search, $searchOptions, $searchPlacesArray));
         $chunkie->setPlaceholder('lang', $_lang, 'module');
         $chunkie->setPlaceholder('options', $options, 'module');
         $chunkie->setPlaceholder('icon', $_style, 'module');

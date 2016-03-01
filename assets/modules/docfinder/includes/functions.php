@@ -21,7 +21,7 @@
 //
 //
 
-function printResultTabs($search, $searchOptions, $theme, $searchPlacesArray)
+function printResultTabs($search, $searchOptions, $searchPlacesArray)
 {
     // if the search string is empty put message and return
     if (!$search['string']) {
@@ -56,7 +56,7 @@ function printResultTabs($search, $searchOptions, $theme, $searchPlacesArray)
         if ($searchOptions['search_place_' . $id] != 'checked="checked"') continue;
 
         // get results
-        $results[$id] = printResultTables($id, $search, $searchOptions, $theme, false, $searchPlacesArray);
+        $results[$id] = printResultTables($id, $search, $searchOptions, false, $searchPlacesArray);
 
         // print tab only if there are hits
         if ($results[$id]['hits']) {
@@ -83,7 +83,7 @@ function printResultTabs($search, $searchOptions, $theme, $searchPlacesArray)
         $name = "[+lang.combined_view+]";
 
         // get results
-        $results[$id] = printResultTables($id, $search, $searchOptions, $theme, $results, $searchPlacesArray);
+        $results[$id] = printResultTables($id, $search, $searchOptions, $results, $searchPlacesArray);
 
         $output .= '
         <!-- Tab: Combined View -->
@@ -130,7 +130,7 @@ function printResultTabs($search, $searchOptions, $theme, $searchPlacesArray)
 }
 
 
-function printResultTables($area, $search, $searchOptions, $theme, $results, $searchPlacesArray)
+function printResultTables($area, $search, $searchOptions, $results, $searchPlacesArray)
 {
     global $modx;
 
