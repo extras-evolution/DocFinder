@@ -25,7 +25,7 @@ if (IN_MANAGER_MODE != 'true') {
     die('<h1>ERROR:</h1><p>Please use the MODx Content Manager instead of accessing this file directly.</p>');
 }
 
-global $modx;
+global $modx, $_style;
 
 // set customtv (base) path
 define('DF_PATH', str_replace(MODX_BASE_PATH, '', str_replace('\\', '/', realpath(dirname(__FILE__)))) . '/');
@@ -290,6 +290,7 @@ switch ($checkform) {
         $chunkie->setTpl(printResultTabs($search, $searchOptions, $theme, $searchPlacesArray));
         $chunkie->setPlaceholder('lang', $_lang, 'module');
         $chunkie->setPlaceholder('options', $options, 'module');
+        $chunkie->setPlaceholder('icon', $_style, 'module');
         $chunkie->prepareTemplate('', array(), 'module');
         $output = $chunkie->process('module');
         break;
@@ -298,6 +299,7 @@ switch ($checkform) {
         $chunkie->setTpl($history['search']);
         $chunkie->setPlaceholder('lang', $_lang, 'module');
         $chunkie->setPlaceholder('options', $options, 'module');
+        $chunkie->setPlaceholder('icon', $_style, 'module');
         $chunkie->prepareTemplate('', array(), 'module');
         $output = $chunkie->process('module');
         break;
@@ -306,6 +308,7 @@ switch ($checkform) {
         $chunkie->setTpl($history['replace']);
         $chunkie->setPlaceholder('lang', $_lang, 'module');
         $chunkie->setPlaceholder('options', $options, 'module');
+        $chunkie->setPlaceholder('icon', $_style, 'module');
         $chunkie->prepareTemplate('', array(), 'module');
         $output = $chunkie->process('module');
         break;
@@ -316,6 +319,7 @@ switch ($checkform) {
         $chunkie->setPlaceholder('history', $history, 'module');
         $chunkie->setPlaceholder('lang', $_lang, 'module');
         $chunkie->setPlaceholder('options', $options, 'module');
+        $chunkie->setPlaceholder('icon', $_style, 'module');
 
         $chunkie->setTpl($chunkie->getTemplateChunk('@FILE templates/module.template.html'));
         $chunkie->prepareTemplate('', array(), 'module');
