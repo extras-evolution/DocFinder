@@ -343,7 +343,6 @@ div#results_container table td.found_in {
 
 div#results_container table td.createdon,
 div#results_container table td.editedon {
-    white-space: nowrap;
 }
 
 /* @group Name */
@@ -372,6 +371,7 @@ div#results_container table td.name a:hover {
 div#results_container table th.type,
 div#results_container table td.type {
     width: 18px;
+    white-space: nowrap;
 }
 
 /* @group Pagetitle and Branch */
