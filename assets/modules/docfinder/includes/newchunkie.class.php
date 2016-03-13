@@ -119,7 +119,9 @@ class newChunkie
     function __construct(&$modx, $config = array())
     {
         $this->modx = & $modx;
-
+        
+        if(!isset($this->modx->chunkieCache)) $this->modx->chunkieCache = array();
+        
         if (!class_exists("PHxParser")) {
             include_once(strtr(realpath(dirname(__FILE__)) . "/phx.parser.class.inc.php", '\\', '/'));
         }
