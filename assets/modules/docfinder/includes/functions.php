@@ -370,8 +370,8 @@ function printResultTables($area, $search, $searchOptions, $results, $searchPlac
                         // set values for the documents
                         if ($section['id'] == "DocAndTVV") {
                             // set URLs
-                            $urlEdit = "index.php?a=" . $searchPlacesArray[$area]['edit'] . "&amp;id=" . $searchResults['id'];
-                            $urlInfo = "index.php?a=" . $searchPlacesArray[$area]['info'] . "&amp;id=" . $searchResults['id'];
+                            $urlEdit = "index.php?a=" . $searchPlacesArray[$section['id']]['edit'] . "&amp;id=" . $searchResults['id'];
+                            $urlInfo = "index.php?a=" . $searchPlacesArray[$section['id']]['info'] . "&amp;id=" . $searchResults['id'];
                             $urlOpen = $modx->makeUrl(intval($searchResults['id']));
 
                             // set values
@@ -381,7 +381,7 @@ function printResultTables($area, $search, $searchOptions, $results, $searchPlac
                             $editedon = $modx->toDateFormat($searchResults['editedon']);
                         } else { // set values for the resources
                             // set URLs
-                            $urlEdit = "index.php?a=" . $searchPlacesArray[$area]['edit'] . "&amp;id=" . $searchResults['id'];
+                            $urlEdit = "index.php?a=" . $searchPlacesArray[$section['id']]['edit'] . "&amp;id=" . $searchResults['id'];
 
                             // set values
                             if ($searchResults['templatename']) $searchResults['name'] = $searchResults['templatename'];
