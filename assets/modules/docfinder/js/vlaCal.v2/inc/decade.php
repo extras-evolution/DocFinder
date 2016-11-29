@@ -31,7 +31,7 @@
 		$pr_ts	= mktime(1, 1, 1, 1, 1, $ts_year - 11);
 	} else if($ts_year == $decadeAr[0][0]) $nx_ts = mktime(1, 1, 1, 1, 1, $ts_year + 11);
 ?>
-<table class="year" cellpadding="0" summary="{'ts': '<?php $ts?>', 'pr_ts': '<?php $pr_ts?>', 'nx_ts': '<?php $nx_ts;?>', 'label': '<?php ($decade[0]+1).' - '.($decade[1]-1)?>', 'current': 'decade'<?php ($decade == $decadeAr[0] ? ", 'hide_left_arrow': '1'" : '').($decade == $decadeAr[sizeof($decadeAr)-1] ? ", 'hide_right_arrow': '1'" : '')?>}">
+<table class="year" cellpadding="0" summary="{'ts': '<?php echo $ts?>', 'pr_ts': '<?php echo $pr_ts?>', 'nx_ts': '<?php echo $nx_ts;?>', 'label': '<?php echo ($decade[0]+1).' - '.($decade[1]-1)?>', 'current': 'decade'<?php echo ($decade == $decadeAr[0] ? ", 'hide_left_arrow': '1'" : '').($decade == $decadeAr[sizeof($decadeAr)-1] ? ", 'hide_right_arrow': '1'" : '')?>}">
 <?php
 	//Add years
 	$year = $decade[0];
