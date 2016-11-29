@@ -12,7 +12,7 @@
 	$pr_ts		= mktime(1, 1, 1, 1, 1, $ts_year-1);
 	$nx_ts		= mktime(1, 1, 1, 1, 1, $ts_year+1);
 ?>
-<table class="year" cellpadding="0" summary="{'ts': '<?php $ts?>', 'pr_ts': '<?php $pr_ts?>', 'nx_ts': '<?php $nx_ts;?>', 'label': '<?php $ts_year?>', 'current': 'year', 'parent': 'decade'<?php ($ts_year == 1979 ? ", 'hide_left_arrow': '1'" : '').($ts_year == 2030 ? ", 'hide_right_arrow': '1'" : '')?>}">
+<table class="year" cellpadding="0" summary="{'ts': '<?php echo $ts?>', 'pr_ts': '<?php echo $pr_ts?>', 'nx_ts': '<?php echo $nx_ts;?>', 'label': '<?php echo $ts_year?>', 'current': 'year', 'parent': 'decade'<?php echo ($ts_year == 1979 ? ", 'hide_left_arrow': '1'" : '').($ts_year == 2030 ? ", 'hide_right_arrow': '1'" : '')?>}">
 <?php
 	//Add months
 	$m = 1;
