@@ -43,7 +43,7 @@
 
 	4. Insert 
 		
-			include(MODX_BASE_PATH . 'assets/modules/docfinder/index.php');
+			include(MODX_BASE_PATH . 'assets/modules/docfinder/docfinder.module.php');
 		
 		as module code.
 
